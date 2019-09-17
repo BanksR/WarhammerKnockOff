@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e45f8356f9279346869608094ee6c7c, type: 3}
+  m_Name: EnemyActor
+  m_EditorClassIdentifier: 
+  unitSprite: {fileID: 0}
+  unitName: Enemy Swordsmen
+  unitSize: 2
+  unitMovementDistance: 6
+  weaponSkill: 4
+  unitToughness: 4
+  unitSavingThrow: 3
+  unitHP: 2
