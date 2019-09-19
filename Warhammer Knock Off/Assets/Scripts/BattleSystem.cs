@@ -6,14 +6,16 @@ public class BattleSystem : MonoBehaviour
 {
 
     
-    public Weapon playerUnit, enemyUnit;
+    public Actor playerUnit, enemyUnit;
+    
     public bool playerTurn = true;
+    Phase currentPhase;
 
 
     
     private void Update()
     {
-        if (Input.anyKeyDown)
+        if (Input.anyKeyDown && Utilities.currentPhase == Phase.Fight)
         {
             if (playerTurn)
             {
@@ -28,25 +30,25 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    public void ResolveAttack(Weapon attacker, Actor defender)
+    public void ResolveAttack(Actor attacker, Actor defender)
     {
         
         int numberOfHits = 0;
         int numberOfWounds = 0;
         int numberOfMisses = 0;
 
-        for (int i = 0; i < attacker.unitSize * attacker.weaponShootAmount; i++)
+        for (int i = 0; i < attacker.Unit_Size * attacker.Weapon_Attack_Num; i++)
         {
             
             if (Utilities.RollToHit(attacker, defender))
             {
-                Debug.Log(attacker.unitName + " hits!");
+                Debug.Log(attacker.Unit_Name + "hits!");
                 numberOfHits++;
 
             }
             else
             {
-                Debug.Log(attacker.unitName + " misses");
+                Debug.Log(attacker.Unit_Name + " misses");
 
             }
         }
@@ -55,7 +57,7 @@ public class BattleSystem : MonoBehaviour
         for (int i = 0; i < numberOfHits; i++)
         {
 
-            if (Utilities.RollToWound(attacker as Weapon, defender))
+            if (Utilities.RollToWound(attacker, defender))
             {
                 Debug.Log("WOUND!!!");
                 numberOfWounds++;
@@ -72,11 +74,11 @@ public class BattleSystem : MonoBehaviour
 
         if (numberOfWounds > 0)
         {
-            ParticleManager.instance.HitParticle(numberOfWounds);
+            ParticleManager.instance.HitParticle(numberOfWounds, defender.particleSpawnPos.transform.position);
         }
         if (numberOfMisses > 0)
         {
-            ParticleManager.instance.MissParticle(numberOfMisses);
+            ParticleManager.instance.MissParticle(numberOfMisses, defender.particleSpawnPos.transform.position);
         }
         
         

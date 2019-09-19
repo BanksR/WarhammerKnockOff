@@ -9,13 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e45f8356f9279346869608094ee6c7c, type: 3}
-  m_Name: Player
+  m_Name: EnemyShieldBearer
   m_EditorClassIdentifier: 
   unitSprite: {fileID: 0}
-  unitName: Player
+  unitName: Shield Bearer1
   unitSize: 1
-  unitMovementDistance: 6
-  weaponSkill: 3
-  unitToughness: 4
-  unitSavingThrow: 3
-  unitHP: 20
+  unitMovementDistance: 4
+  weaponSkill: 4
+  unitToughness: 5
+  unitSavingThrow: 2
+  unitHP: 10

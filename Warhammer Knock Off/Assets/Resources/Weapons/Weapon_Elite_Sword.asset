@@ -9,19 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a8ba182c81347047bf0d0bad2e98a71, type: 3}
-  m_Name: BowMan
+  m_Name: Weapon_Elite_Sword
   m_EditorClassIdentifier: 
-  unitSprite: {fileID: 0}
-  unitName: Bow Man
-  unitSize: 5
-  unitMovementDistance: 8
-  weaponSkill: 1
-  unitToughness: 3
-  unitSavingThrow: 3
-  unitHP: 907
-  weaponSprite: {fileID: 21300016, guid: 6aebe558b13021540ae76a475de06839, type: 3}
-  weaponName: Bow
-  weaponRange: 12
+  weaponSprite: {fileID: 0}
+  weaponName: Elite Sword
+  weaponRange: 1
   weaponStrength: 4
-  weaponShootAmount: 1
-  weaponDamage: 1
+  weaponShootAmount: 2
+  weaponDamage: 2

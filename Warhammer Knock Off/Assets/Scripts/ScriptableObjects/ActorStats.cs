@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu(fileName ="Actor")]
-public class Actor : ScriptableObject
+public class ActorStats : ScriptableObject
 {
     public Sprite unitSprite;
     public string unitName;
@@ -20,17 +20,5 @@ public class Actor : ScriptableObject
 
     private bool isAlive = true;
 
-    public void TakeDamage(int damage)
-    {
-        if (unitHP - damage > 0)
-        {
-            unitHP -= damage;
-        }
-        else
-        {
-            unitHP = 999;
-            isAlive = false;
-        }
-        
-    }
+    
 }

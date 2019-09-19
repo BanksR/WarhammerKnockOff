@@ -8,14 +8,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e45f8356f9279346869608094ee6c7c, type: 3}
-  m_Name: EnemyActor
+  m_Script: {fileID: 11500000, guid: 0a8ba182c81347047bf0d0bad2e98a71, type: 3}
+  m_Name: Weapon_Sword
   m_EditorClassIdentifier: 
-  unitSprite: {fileID: 0}
-  unitName: Enemy Swordsmen
-  unitSize: 2
-  unitMovementDistance: 6
-  weaponSkill: 4
-  unitToughness: 4
-  unitSavingThrow: 3
-  unitHP: 2
+  weaponSprite: {fileID: 0}
+  weaponName: Basic Sword
+  weaponRange: 1
+  weaponStrength: 3
+  weaponShootAmount: 1
+  weaponDamage: 1

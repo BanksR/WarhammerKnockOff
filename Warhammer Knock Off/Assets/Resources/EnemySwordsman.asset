@@ -9,13 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e45f8356f9279346869608094ee6c7c, type: 3}
-  m_Name: Player
+  m_Name: EnemySwordsman
   m_EditorClassIdentifier: 
   unitSprite: {fileID: 0}
-  unitName: Player
+  unitName: Swordsman
   unitSize: 1
-  unitMovementDistance: 6
+  unitMovementDistance: 5
   weaponSkill: 3
   unitToughness: 4
   unitSavingThrow: 3
-  unitHP: 20
+  unitHP: 10

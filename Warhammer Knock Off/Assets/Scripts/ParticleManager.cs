@@ -23,9 +23,10 @@ public class ParticleManager : MonoBehaviour
         }
     }
 
-    public void HitParticle(int numberOfParticlesToSpawn)
+    public void HitParticle(int numberOfParticlesToSpawn, Vector3 spawnPos)
     {
-        ParticleSystem hp = Instantiate(hitParts);
+        transform.position = spawnPos;
+        ParticleSystem hp = Instantiate(hitParts, spawnPos, Quaternion.Euler(0, 0, 70));
         var main = hp.main;
         var emit = hp.emission;
        
@@ -38,9 +39,10 @@ public class ParticleManager : MonoBehaviour
         main.stopAction = ParticleSystemStopAction.Destroy;
     }
 
-    public void MissParticle(int numberOfParticlesToSpawn)
+    public void MissParticle(int numberOfParticlesToSpawn, Vector3 spawnPos)
     {
-        ParticleSystem hp = Instantiate(missParts);
+        
+        ParticleSystem hp = Instantiate(missParts, spawnPos, Quaternion.Euler(0, 0, 70) );
         var main = hp.main;
         var emit = hp.emission;
         emit.SetBurst(0, new ParticleSystem.Burst(0.25f, 1, 1, numberOfParticlesToSpawn, 0.5f));
