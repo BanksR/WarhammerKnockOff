@@ -10,11 +10,21 @@ public class ActorMovmement : MonoBehaviour
     protected bool isMoving = false;
     public BattleSystem battleSystem;
 
+    protected Animator _anims;
+
     protected void Awake()
     {
         actorStats = GetComponent<Actor>();
         moveRange = actorStats.Unit_MovementDist;
+        _anims = GetComponent<Animator>();
     }
+
+    protected virtual void Update()
+    {
+        _anims.SetBool("IsMoving", isMoving);
+    }
+
+
 
     protected virtual void DrawMoveLine(Vector3 startPos)
     {
@@ -42,6 +52,8 @@ public class ActorMovmement : MonoBehaviour
 
         while (distance > 0.1f || CheckForEnemies())
         {
+            isMoving = true;
+            //_anims.SetBool("IsMoving", isMoving);
             transform.Translate(v * Time.deltaTime);
             distance = Vector3.Distance(transform.position, target);
             yield return new WaitForEndOfFrame();
@@ -50,6 +62,7 @@ public class ActorMovmement : MonoBehaviour
         transform.Translate(Vector3.zero);
 
         isMoving = false;
+        //_anims.SetBool("IsMoving", isMoving);
 
         yield return null;
     }
@@ -63,6 +76,7 @@ public class ActorMovmement : MonoBehaviour
         if (hit != null && hit.gameObject.CompareTag("Enemy"))
         {
             StopAllCoroutines();
+            isMoving = false;
             Debug.Log("Found: " + hit.name);
             Debug.DrawLine(transform.position, hit.transform.position, Color.blue);
             battleSystem.playerUnit = this.GetComponent<Actor>();

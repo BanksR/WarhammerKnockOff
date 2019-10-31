@@ -7,8 +7,10 @@ public class PlayerActorMovement : ActorMovmement
 
     private bool inRange = false;
 	// Update is called once per frame
-	void Update ()
+	protected override void Update ()
     {
+        base.Update();
+
         if (Utilities.currentPhase == Phase.PlayerMovement && !CheckForEnemies())
         {
             ClickToMove();
@@ -21,7 +23,7 @@ public class PlayerActorMovement : ActorMovmement
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0f;
         base.DrawMoveLine(transform.position);
-        if (Input.GetMouseButtonDown(0) && !inRange && !CheckForEnemies())
+        if (Input.GetMouseButtonDown(0) && !inRange && !CheckForEnemies() && !isMoving)
         {
             isMoving = true;
             StartCoroutine(MoveTo(mousePos));
