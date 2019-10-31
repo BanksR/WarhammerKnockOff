@@ -44,6 +44,7 @@ public class BattleSystem : MonoBehaviour
             {
                 Debug.Log(attacker.Unit_Name + "hits!");
                 numberOfHits++;
+                
 
             }
             else
@@ -61,7 +62,8 @@ public class BattleSystem : MonoBehaviour
             {
                 Debug.Log("WOUND!!!");
                 numberOfWounds++;
-                
+                attacker.GetComponent<ActorMovmement>()._anims.SetTrigger("Attack");
+
             }
             else
             {

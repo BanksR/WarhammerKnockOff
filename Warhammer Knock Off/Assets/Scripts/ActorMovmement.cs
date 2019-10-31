@@ -10,7 +10,7 @@ public class ActorMovmement : MonoBehaviour
     protected bool isMoving = false;
     public BattleSystem battleSystem;
 
-    protected Animator _anims;
+    public Animator _anims;
 
     protected void Awake()
     {

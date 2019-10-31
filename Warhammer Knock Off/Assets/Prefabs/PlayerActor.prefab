@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 4218896378082668}
   - component: {fileID: 114044396641378446}
   - component: {fileID: 114123814677277746}
+  - component: {fileID: 95404505025429220}
   m_Layer: 0
   m_Name: PlayerActor
   m_TagString: Untagged
@@ -338,6 +339,24 @@ Transform:
   m_Father: {fileID: 4593431641177786}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95404505025429220
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1982800117811188}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 46014f041efb550468b92ae259ec50de, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114044396641378446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -364,7 +383,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e08581729a3d434898140d40aa758cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleSystem: {fileID: 0}
+  battleSystem: {fileID: 114762083816729954, guid: e3f002c79f85eb34a9aee939c237abb0,
+    type: 2}
 --- !u!212 &212013774756450300
 SpriteRenderer:
   m_ObjectHideFlags: 1
