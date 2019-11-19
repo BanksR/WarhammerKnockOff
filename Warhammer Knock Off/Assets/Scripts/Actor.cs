@@ -51,7 +51,7 @@ public class Actor : MonoBehaviour
         Weapon_Damage = weaponStats.weaponDamage;
     }
 
-    public void TakeDamage(int damage)
+    public virtual void TakeDamage(int damage)
     {
         if (Unit_HP - damage > 0)
         {

@@ -82,6 +82,17 @@ public class BattleSystem : MonoBehaviour
         {
             ParticleManager.instance.MissParticle(numberOfMisses, defender.particleSpawnPos.transform.position);
         }
+
+
+        if (playerTurn)
+        {
+            BattleCanvas.instance.UpdateEnemyHP(defender);
+        }
+        else
+        {
+            BattleCanvas.instance.UpdatePlayerHP(attacker);
+        }
+
         
         
         playerTurn = !playerTurn;

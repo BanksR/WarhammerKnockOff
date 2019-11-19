@@ -79,8 +79,13 @@ public class ActorMovmement : MonoBehaviour
             isMoving = false;
             Debug.Log("Found: " + hit.name);
             Debug.DrawLine(transform.position, hit.transform.position, Color.blue);
+            
             battleSystem.playerUnit = this.GetComponent<Actor>();
+            BattleCanvas.instance.PlayerActor = this.GetComponent<Actor>();
+            
             battleSystem.enemyUnit = hit.GetComponent<Actor>();
+            BattleCanvas.instance.EnemyActor = hit.GetComponent<Actor>();
+            
             Utilities.ChangePhases(Phase.Fight);
 
             return true;
