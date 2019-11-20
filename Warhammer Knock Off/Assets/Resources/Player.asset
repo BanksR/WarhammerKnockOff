@@ -11,11 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e45f8356f9279346869608094ee6c7c, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  unitSprite: {fileID: 0}
+  unitSprite: {fileID: 21300002, guid: 6aebe558b13021540ae76a475de06839, type: 3}
   unitName: Player
   unitSize: 1
   unitMovementDistance: 6
   weaponSkill: 3
   unitToughness: 4
   unitSavingThrow: 3
-  unitHP: 20
+  unitHP: 7

@@ -397,8 +397,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6abfe6317502cbf4f8c6b715d8864852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actorStats: {fileID: 11400000, guid: dcfdf406755b95743afd066e47475e3b, type: 2}
-  weaponStats: {fileID: 11400000, guid: 0ce8065cdd7104f4d8f82349e9aab97f, type: 2}
+  actorStats: {fileID: 11400000, guid: 661e367fa18df304ba624cddf1e27114, type: 2}
+  weaponStats: {fileID: 11400000, guid: 9e7a27ae8d2acf94e85767f73b5d5656, type: 2}
   particleSpawnPos: {fileID: 4062570755480958}
   isAlive: 1
 --- !u!212 &212150569484536486

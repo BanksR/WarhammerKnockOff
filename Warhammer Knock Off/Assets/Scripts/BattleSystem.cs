@@ -9,7 +9,7 @@ public class BattleSystem : MonoBehaviour
     public Actor playerUnit, enemyUnit;
     
     public bool playerTurn = true;
-    Phase currentPhase;
+    public Phase currentPhase;
 
 
     
@@ -90,7 +90,7 @@ public class BattleSystem : MonoBehaviour
         }
         else
         {
-            BattleCanvas.instance.UpdatePlayerHP(attacker);
+            BattleCanvas.instance.UpdatePlayerHP(defender);
         }
 
         

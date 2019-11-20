@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e45f8356f9279346869608094ee6c7c, type: 3}
   m_Name: EnemyShieldBearer
   m_EditorClassIdentifier: 
-  unitSprite: {fileID: 0}
-  unitName: Shield Bearer1
+  unitSprite: {fileID: 21300002, guid: 6aebe558b13021540ae76a475de06839, type: 3}
+  unitName: Shield Bearer
   unitSize: 1
   unitMovementDistance: 4
   weaponSkill: 4

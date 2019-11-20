@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8ba182c81347047bf0d0bad2e98a71, type: 3}
   m_Name: Weapon_Elite_Sword
   m_EditorClassIdentifier: 
-  weaponSprite: {fileID: 0}
+  weaponSprite: {fileID: 21300008, guid: 70be4da305158ba44a031ec4cb547ffd, type: 3}
   weaponName: Elite Sword
   weaponRange: 1
   weaponStrength: 4
